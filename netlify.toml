@@ -7,4 +7,4 @@ edge_handlers = "edge-handlers"
 from = "/*"
 to = "/:splat"
 status = 200
-edge_handler = "filterRequest"
+edge_handler = "filter-request"
