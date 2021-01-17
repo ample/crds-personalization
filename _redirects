@@ -1,1 +1,1 @@
-/testing       200!    EdgeHandler=filter-request
+/old-path  /       301    EdgeHandler=filter-request
