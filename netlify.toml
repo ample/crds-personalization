@@ -1,9 +1,10 @@
 [build]
 command = ":"
 publish = "."
+edge_handlers = "edge-handlers"
 
 [[redirects]]
 from = "/*"
 to = "/:splat"
 status = 200
-edge_handler = "filterRequests"
+edge_handler = "filterRequest"
