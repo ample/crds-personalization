@@ -1,11 +1,3 @@
 [build]
 command = ":"
 publish = "."
-edge_handlers = "edge-handlers"
-
-[[redirects]]
-from = "/*"
-to = "/:splat"
-status = 200
-force = true
-edge_handler = "filter-request"
