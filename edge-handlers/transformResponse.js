@@ -16,7 +16,7 @@ export function onRequest(event) {
  
     // const root = parse(originResponse.body);
     // const body = root.querySelector('body');
-    console.log(originResponse.body)
+    console.log(JSON.stringify(originResponse.body))
 
     const transformedBody = `<p>${event.request.url}</p>`;
     const headers = {
