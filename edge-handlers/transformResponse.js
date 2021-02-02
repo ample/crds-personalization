@@ -14,14 +14,13 @@ export function onRequest(event) {
 	
     // const transformedBody = originResponse.body.pipeThrough(transformation);
  
-    try{
-
-      const root = parse(originResponse.body);
-      const body = root.querySelector('body');
-      console.log(typeof root)
-    } catch(e) {
-      console.log(e)
-    }
+    // try{
+    //   const root = parse(originResponse.body);
+    //   const body = root.querySelector('body');
+    //   console.log(typeof root)
+    // } catch(e) {
+    //   console.log(e)
+    // }
 
     const transformedBody = `<p>${event.request.url}</p>`;
     const headers = {
