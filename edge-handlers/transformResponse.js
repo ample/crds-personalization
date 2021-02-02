@@ -11,14 +11,15 @@ export function onRequest(event) {
         controller.enqueue(buf);
       },
     });
-	
+  
     const transformedBody = originResponse.body.pipeThrough(transformation);
- 
+    console.log('>>>>', originResponse.body);
+    
     // const root = parse(originResponse.body);
     // const body = root.querySelector('body');
     // console.log('originResponse', originResponse.body.length)
     // const transformedBody = `<p>${event.request.url}</p>`;
-    
+
     const headers = {
       'Content-Type': 'text/html'
     };
