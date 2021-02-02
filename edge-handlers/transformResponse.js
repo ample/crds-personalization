@@ -14,10 +14,11 @@ export function onRequest(event) {
 	
     // const transformedBody = originResponse.body.pipeThrough(transformation);
  
-    const root = parse(html);
-
+    const root = parse(originResponse.body);
     const body = root.querySelector('body');
-    const transformedBody = `<p>${body}</p>`;
+    console.log(body)
+    
+    const transformedBody = '<p>This is a thing</p>';
     const headers = {
       'Content-Type': 'text/html'
     };
