@@ -13,8 +13,8 @@ export function onRequest(event) {
     });
   
     const transformedBody = originResponse.body.pipeThrough(transformation);
-    console.log('>>>>', originResponse.body);
-    
+    console.log('>>>>', JSON.stringify(originResponse.body).length);
+
     // const root = parse(originResponse.body);
     // const body = root.querySelector('body');
     // console.log('originResponse', originResponse.body.length)
