@@ -2,7 +2,7 @@
 
 export function onRequest(event) {
   event.replaceResponse(async () => {
-    // const originResponse = await fetch(event.request);
+    const originResponse = await fetch(event.request.url);
     // const transformation = new TransformStream({
     //   flush(controller) {
     //     const encoder = new TextEncoder();
@@ -16,7 +16,7 @@ export function onRequest(event) {
  
     // const root = parse(originResponse.body);
     // const body = root.querySelector('body');
-    // console.log(body)
+    console.log(originResponse.body)
 
     const transformedBody = `<p>${event.request.url}</p>`;
     const headers = {
