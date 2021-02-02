@@ -1,4 +1,4 @@
-// const parse = require('node-html-parser').parse;
+const parse = require('node-html-parser').parse;
 
 export function onRequest(event) {
   event.replaceResponse(async () => {
