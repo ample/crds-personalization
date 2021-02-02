@@ -1,0 +1,23 @@
+{
+  "name": "romantic-wilson-fa6979",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-html-parser": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ample/crds-personalization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ample/crds-personalization/issues"
+  },
+  "homepage": "https://github.com/ample/crds-personalization#readme"
+}

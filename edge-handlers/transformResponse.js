@@ -1,6 +1,8 @@
+const parse = require('node-html-parser').parse;
+
 export function onRequest(event) {
   event.replaceResponse(async () => {
-    // const originResponse = await fetch(event.request);
+    const originResponse = await fetch(event.request);
     // const transformation = new TransformStream({
     //   flush(controller) {
     //     const encoder = new TextEncoder();
@@ -11,8 +13,11 @@ export function onRequest(event) {
     // });
 	
     // const transformedBody = originResponse.body.pipeThrough(transformation);
-    
-    const transformedBody = '<p>This is a thing</p>';
+ 
+    const root = parse(html);
+
+    const body = root.querySelector('body');
+    const transformedBody = `<p>${body}</p>`;
     const headers = {
       'Content-Type': 'text/html'
     };
