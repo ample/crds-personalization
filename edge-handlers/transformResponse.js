@@ -2,7 +2,8 @@ const parse = require('node-html-parser').parse;
 
 export function onRequest(event) {
   event.replaceResponse(async () => {
-    const originResponse = await fetch(event.request.url);
+    // const originResponse = await fetch(event.request.url);
+    
     // const transformation = new TransformStream({
     //   flush(controller) {
     //     const encoder = new TextEncoder();
