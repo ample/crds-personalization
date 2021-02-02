@@ -1,9 +1,8 @@
-const parse = require('node-html-parser').parse;
+// const parse = require('node-html-parser').parse;
 
 export function onRequest(event) {
   event.replaceResponse(async () => {
-    // const originResponse = await fetch(event.request.url);
-    
+    // const originResponse = await fetch(event.request);
     // const transformation = new TransformStream({
     //   flush(controller) {
     //     const encoder = new TextEncoder();
@@ -15,13 +14,9 @@ export function onRequest(event) {
 	
     // const transformedBody = originResponse.body.pipeThrough(transformation);
  
-    // try{
-    //   const root = parse(originResponse.body);
-    //   const body = root.querySelector('body');
-    //   console.log(typeof root)
-    // } catch(e) {
-    //   console.log(e)
-    // }
+    // const root = parse(originResponse.body);
+    // const body = root.querySelector('body');
+    // console.log(body)
 
     const transformedBody = `<p>${event.request.url}</p>`;
     const headers = {
