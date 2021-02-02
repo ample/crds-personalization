@@ -1,3 +1,4 @@
 export function onRequest(event) {
-  event.replaceResponse(() => fetch("https://www.crossroads.net/"));
+  const url = new URL(event.request.url)
+  event.replaceResponse(() => fetch(`https://www.crossroads.net${url.pathname}`));
 }
