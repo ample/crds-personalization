@@ -1,2 +1,1 @@
-/old-path   /new-path               301    EdgeHandler=replaceResponse
-/*          /:splat          200    EdgeHandler=filter-request
+/old-path   /new-path        301    EdgeHandler=replaceResponse
