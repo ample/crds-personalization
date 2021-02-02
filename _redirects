@@ -1,2 +1,2 @@
-/old-path   /old-path        200    EdgeHandler=injectHeaders
+/old-path   /old-path/:splat        200    EdgeHandler=injectHeaders
 /*          /:splat          200    EdgeHandler=filter-request
