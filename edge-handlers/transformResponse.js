@@ -10,7 +10,7 @@ export function onRequest(event) {
     const root = parse(originResponse);
     const body = root.querySelector('body');
 
-    return new Response(body, {
+    return new Response('<html><body>This.</body></html>', {
       headers
     });
   });
