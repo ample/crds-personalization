@@ -1,16 +1,18 @@
 export function onRequest(event) {
   event.replaceResponse(async () => {
-    const originResponse = await fetch(event.request);
-    const transformation = new TransformStream({
-      flush(controller) {
-        const encoder = new TextEncoder();
-        const buf = encoder.encode(
-          "<p>Served from a Netlify Edge Handler</p>");
-        controller.enqueue(buf);
-      },
-    });
+    // const originResponse = await fetch(event.request);
+    // const transformation = new TransformStream({
+    //   flush(controller) {
+    //     const encoder = new TextEncoder();
+    //     const buf = encoder.encode(
+    //       "<p>Served from a Netlify Edge Handler</p>");
+    //     controller.enqueue(buf);
+    //   },
+    // });
 	
-    const transformedBody = originResponse.body.pipeThrough(transformation);
+    // const transformedBody = originResponse.body.pipeThrough(transformation);
+    
+    const transformedBody = '<p>This is a thing</p>';
     const headers = {
       'Content-Type': 'text/html'
     };
