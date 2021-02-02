@@ -1,2 +1,2 @@
-/crossroads/*     /:splat          200    EdgeHandler=replaceResponse
 /old-path         /new-path        301    EdgeHandler=filter-request
+/*     /:splat          200    EdgeHandler=replaceResponse
